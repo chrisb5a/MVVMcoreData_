@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FavoriteS" representedClassName="FavoriteS" syncable="YES">
+        <attribute name="attrs" optional="YES" attributeType="String"/>
+        <attribute name="favImg" optional="YES" attributeType="Binary"/>
+        <attribute name="ids" optional="YES" attributeType="String"/>
+        <attribute name="isDelete" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <fetchedProperty name="names" optional="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="FavoriteS"/>
+        </fetchedProperty>
+    </entity>
+    <elements>
+        <element name="FavoriteS" positionX="-45" positionY="0" width="128" height="125"/>
+    </elements>
+</model>
