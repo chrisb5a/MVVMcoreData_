@@ -117,7 +117,7 @@ class ProgTableViewCell: UITableViewCell {
     
     
     @objc
-    func progButtonPressed() {
+    func progButtonPressed(_ sender: AnyObject) {
         
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
@@ -152,12 +152,14 @@ class ProgTableViewCell: UITableViewCell {
                         favs.isDelete = Date()
                         if favs.isDelete == nil{} else
                         {context.delete(favs)
+                        sender.setTitle("Add to favorites", for: .normal)
                         //try context.save()
                         }
                         
                         
                         
                         try context.save()
+                        
                             
                     }
                 }
@@ -213,7 +215,7 @@ class ProgTableViewCell: UITableViewCell {
             NewFav.favImg = self.MusicImageView.image?.jpegData(compressionQuality: 1) as? NSData
             
             do {
-
+                sender.setTitle("Remove from favorites", for: .normal)
                 try context.save()
                 AlbumInfoList.append(NewFav)
                 
